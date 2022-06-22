@@ -89,7 +89,7 @@ export class AppComponent {
         break;
       case 'SEX':
         tempEvent.isSex = true;
-        console.log(jueji.xingzhi);
+        console.log(typeof(jueji.xingzhi));
         if(jueji.xingzhi < 0.8) {
         tempEvent.eventText += '对方的兴致似乎不太高，再闲聊一会儿吧～\n';
 	}else{
