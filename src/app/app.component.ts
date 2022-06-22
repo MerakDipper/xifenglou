@@ -88,12 +88,10 @@ export class AppComponent {
         }
         break;
       case 'SEX':
-        if(jueji.xingzhi < 0.8) {
-        tempEvent.isSex = false;
-        tempEvent.eventText += '对方的兴致似乎不太高，再闲聊一会儿吧～\n'
-        }
-        else{
         tempEvent.isSex = true;
+        if(jueji.xingzhi < 0.8) {
+        tempEvent.eventText += '对方的兴致似乎不太高，再闲聊一会儿吧～\n';
+	}else{
         tempEvent.eventText += this.juejiStage3.name + '合起了帷幕。\n';
         if(Math.random() < 0.5){
           let sexEvent = this.juejiStage3.event.sex[Math.floor(Math.random()*this.juejiStage3.event.sex.length)];
