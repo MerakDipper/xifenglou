@@ -105,7 +105,6 @@ export class AppComponent {
             tempEvent.eventText += tempReason[Math.floor(Math.random()* tempReason.length)];
             this.stage4End = true;
             this.stage4EndGG = true;
-            this.stage3Action = false;
           }
         }
         }
@@ -115,6 +114,7 @@ export class AppComponent {
   }
 
   reload(){
+    this.stage3Action = false;
     location.reload();
   }
 }
