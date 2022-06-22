@@ -114,7 +114,6 @@ export class AppComponent {
   }
 
   reload(){
-    this.stage3Action = false;
     location.reload();
   }
 }
