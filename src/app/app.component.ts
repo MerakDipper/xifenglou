@@ -66,31 +66,31 @@ export class AppComponent {
       case 'DRINK':
         tempEvent.isDrink = true;
         if(Math.random() < 0.5){
-          jueji.xingzhi *= 1.25;
+          jueji.event.xingzhi *= 1.25;
           tempEvent.eventText = '酒过三巡，你觉得兴致越发高涨。\n';
         } else{
           tempEvent.eventText = '酒喝得有点晕，你不禁开始担心今晚会不会心有余而力不足。\n';
-          jueji.xingzhi *= 0.75;
+          jueji.event.xingzhi *= 0.75;
         }
         break;
       case 'CHAT':
         tempEvent.isChat = true;
         if(Math.random() < 0.75){
-          jueji.xingzhi *= 1.1;
+          jueji.event.xingzhi *= 1.1;
           let visitor = visitorList[Math.floor(Math.random()*visitorList.length)];
           let tempBagua = [...baguaList, ...this.juejiStage3.event.chat, jueji.name + ':" 官人可知，' + visitor + '也常来这里呢～"'];
           tempEvent.eventText = tempBagua[Math.floor(Math.random()* tempBagua.length)];
           tempEvent.eventText += '\n' + '你们聊的十分投机，渐入佳境。\n';
         } else{
-          jueji.xingzhi *= 0.75;
+          jueji.event.xingzhi *= 0.75;
           let topic = topicList[Math.floor(Math.random()*topicList.length)];
           tempEvent.eventText = '闲谈之际，你们不经意间聊到了' + topic + ', 观点不合吵了起来。你们都有些闷闷不乐。\n';
         }
         break;
       case 'SEX':
         tempEvent.isSex = true;
-        console.log(typeof(jueji.xingzhi));
-        if(jueji.xingzhi < 0.8) {
+        console.log(typeof(jueji.event.xingzhi));
+        if(jueji.event.xingzhi < 0.8) {
         tempEvent.eventText += '对方的兴致似乎不太高，再闲聊一会儿吧～\n';
 	}else{
         tempEvent.eventText += this.juejiStage3.name + '合起了帷幕。\n';
@@ -98,7 +98,7 @@ export class AppComponent {
           let sexEvent = this.juejiStage3.event.sex[Math.floor(Math.random()*this.juejiStage3.event.sex.length)];
           tempEvent.eventText += '交欢之际，' + sexEvent.key + '\n';
           tempEvent.eventText += sexEvent.value > 0 ? '你不禁大喜，兴致++\n': '你有些无语，兴致--\n';
-            jueji.xingzhi *= (1 + this.sexEvent.value);
+            jueji.event.xingzhi *= (1 + this.sexEvent.value);
         } else{
           tempEvent.eventText += '鸳鸯帐里，烛影双龙戏...\n'
           if(Math.random() < 0.3){
