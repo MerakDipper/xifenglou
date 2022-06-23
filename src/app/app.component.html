@@ -13,7 +13,7 @@
       </div>
 
       <div *ngIf="stage2Select">
-        <h3 nz-typography>本楼角妓有：</h3>
+        <h3 nz-typography>本楼角妓有: </h3>
         <div style="display: flex;flex-wrap: wrap;" *ngIf="!stage3Action">
             <div *ngFor="let ji of juejiList" style="margin: 5px;width: 15%;">
                 <nz-tag  (click)="juejiStage2=ji;juejiStage2.availability ? toNext(): false">{{ji.name}}</nz-tag>
@@ -25,7 +25,7 @@
           <h4 nz-typography>{{juejiStage2.name}}今日已有约了。</h4>
         </div>
         <div *ngIf="juejiStage2.availability && juejiStage2.substitution">
-          <h4 nz-typography>{{juejiStage2.name}}：奴身体不适，还是请{{juejiStage2.friend}}姐妹代劳吧～"</h4>
+          <h4 nz-typography>{{juejiStage2.name}}: 奴身体不适，还是请{{juejiStage2.friend}}姐妹代劳吧～"</h4>
         </div>
       </div>
 
@@ -34,7 +34,7 @@
         <h4 nz-typography>您选择和{{juejiStage3.name}}:</h4>
         <div *ngFor="let event of eventList">
           <div *ngIf="event.isDrink || event.isChat || event.isSex">
-            <h4 nz-typography>{{event.eventText}}</h4>
+            <h4 nz-typography>{{juejiStage3.name}}: {{event.eventText}}</h4>
           </div>
         </div>
         <div>
