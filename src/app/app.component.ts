@@ -76,7 +76,7 @@ export class AppComponent {
       case 'CHAT':
         tempEvent.isChat = true;
         if(Math.random() < 0.75){
-          jueji.event.xingzhi *= 1.1;
+          jueji.event.xingzhi *= 1.2;
           let visitor = visitorList[Math.floor(Math.random()*visitorList.length)];
           let tempBagua = [...baguaList, ...this.juejiStage3.event.chat, jueji.name + ':" 官人可知，' + visitor + '也常来这里呢～"'];
           tempEvent.eventText = tempBagua[Math.floor(Math.random()* tempBagua.length)];
@@ -96,7 +96,7 @@ export class AppComponent {
         tempEvent.eventText += this.juejiStage3.name + '合起了帷幕。\n';
         if(Math.random() < 0.5){
           let sexEvent = this.juejiStage3.event.sex[Math.floor(Math.random()*this.juejiStage3.event.sex.length)];
-          tempEvent.eventText += '交欢之际，' + sexEvent.key + '\n';
+          tempEvent.eventText += '交欢之际，' + this.juejiStage3.name + sexEvent.key + '\n';
           tempEvent.eventText += sexEvent.value > 0 ? '你不禁大喜，兴致++\n': '你有些无语，兴致--\n';
             jueji.event.xingzhi *= (1 + this.sexEvent.value);
         } else{

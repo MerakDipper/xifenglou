@@ -33,10 +33,7 @@
         <h4 nz-typography>{{juejiStage3.name}}在此。</h4>
         <h4 nz-typography>您选择和{{juejiStage3.name}}:</h4>
         <div *ngFor="let event of eventList">
-          <div *ngIf="event.isChat">
-            <h4 nz-typography>{{juejiStage3.name}}: {{event.eventText}}</h4>
-          </div>
-          <div *ngIf="event.isDrink || event.isSex">
+          <div *ngIf="event.isDrink || event.isChat || event.isSex">
             <h4 nz-typography>{{event.eventText}}</h4>
           </div>
         </div>
