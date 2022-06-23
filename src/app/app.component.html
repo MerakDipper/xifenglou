@@ -14,8 +14,10 @@
 
       <div *ngIf="stage2Select">
         <h3 nz-typography>本楼角妓有：</h3>
-        <div  *ngIf="!stage3Action">
-          <nz-tag *ngFor="let ji of juejiList" (click)="juejiStage2=ji;juejiStage2.availability ? toNext(): false">{{ji.name}}</nz-tag>
+        <div style="display: flex;flex-wrap: wrap;" *ngIf="!stage3Action">
+            <div *ngFor="let ji of juejiList" style="margin: 5px;width: 15%;">
+                <nz-tag  (click)="juejiStage2=ji;juejiStage2.availability ? toNext(): false">{{ji.name}}</nz-tag>
+            </div>
         </div>
         <h3 nz-typography>请{{username}}挑选您喜欢的西风少妇。</h3>
 
