@@ -12,23 +12,17 @@
 nz-header {
   background: #fff;
   padding: 0;
-  display:inline-block;
-  width:100px;
 }
 
 nz-content {
   white-space: pre;
   margin: 24px 16px 0;
-  display:inline-block;
-  width:100px;
 }
 
 .inner-content {
   padding: 20px;
   background: #fff;
   min-height: 360px;
-  display:inline-block;
-  width:100px;
 }
 
 nz-footer {
