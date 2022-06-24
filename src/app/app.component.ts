@@ -65,12 +65,12 @@ export class AppComponent {
     switch (action){
       case 'DRINK':
         tempEvent.isDrink = true;
-        if(Math.random() < 0.5){
-          jueji.event.xingzhi *= 1.25;
+        if(Math.random() <= 0.5){
+          jueji.event.xingzhi *= 1.2;
           tempEvent.eventText = '酒过三巡，你觉得兴致越发高涨。\n';
         } else{
           tempEvent.eventText = '酒喝得有点晕，你不禁开始担心今晚会不会心有余而力不足。\n';
-          jueji.event.xingzhi *= 0.75;
+          jueji.event.xingzhi *= 0.85;
         }
         break;
       case 'CHAT':
@@ -83,7 +83,7 @@ export class AppComponent {
           tempEvent.eventText = this.juejiStage3.name + ': ' + tempBagua[Math.floor(Math.random()* tempBagua.length)];
           tempEvent.eventText += '\n' + '你们聊的十分投机，渐入佳境。\n';
         } else{
-          jueji.event.xingzhi *= 0.75;
+          jueji.event.xingzhi *= 0.85;
           let topic = topicList[Math.floor(Math.random()*topicList.length)];
           tempEvent.eventText = '闲谈之际，你们不经意间聊到了' + topic + ', 观点不合吵了起来。你们都有些闷闷不乐。\n';
         }
