@@ -15,7 +15,7 @@ nz-header {
 }
 
 nz-content {
-  white-space: unset;
+  white-space: break-spaces;
   margin: 24px 16px 0;
 }
 
