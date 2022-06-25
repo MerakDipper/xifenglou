@@ -80,6 +80,7 @@ export class AppComponent {
           let visitor = visitorList[Math.floor(Math.random()*visitorList.length)];
           let tempVisitBagua = '官人可知，' + visitor + '也常来这里呢～';
           let tempBagua = [...baguaList, ...this.juejiStage3.event.chat, tempVisitBagua];
+          console.log(tempBagua.toString());
           tempEvent.eventText = this.juejiStage3.name + ': ' + tempBagua[Math.floor(Math.random()* tempBagua.length)];
           tempEvent.eventText += '\n' + '你们聊的十分投机，渐入佳境。\n';
         } else{
