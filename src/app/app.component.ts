@@ -67,9 +67,9 @@ export class AppComponent {
         tempEvent.isDrink = true;
         if(Math.random() <= 0.5){
           jueji.event.xingzhi *= 1.2;
-          tempEvent.eventText = '酒过三巡，' + this.juejiStage3.name + '笑着开始了舞蹈，踏着轻盈的步子在房间里回旋。每一个动作，每一个眼神，无不魅惑人心。' + this.juejiStage3.name +'一边跳一边开始随着舞步脱掉身上的衣服，最后仅着一件勉强盖住大腿里衣的' + this.juejiStage3.name + '借着最后一个旋转坐到了您的飞腿上，笑着勾住您的脖子: 官人, ' + this.juejiStage3.name.slice(-2) + '美么？\n';
+          tempEvent.eventText = '酒过三巡，' + this.juejiStage3.name + '笑着开始了舞蹈，踏着轻盈的步子在房间里回旋。每一个动作，每一个眼神，无不魅惑人心。' + this.juejiStage3.name +'一边跳一边开始随着舞步脱掉身上的衣服，最后仅着一件勉强盖住大腿里衣的' + this.juejiStage3.name + '借着最后一个旋转坐到了您的飞腿上，笑着勾住您的脖子: 官人~' + this.juejiStage3.name.slice(-2) + '美么~~\n';
         } else{
-          tempEvent.eventText = '酒喝得有点晕，你不禁开始担心今晚会不会心有余而力不足。\n';
+          tempEvent.eventText = '酒喝得有点晕@_@，你有些担心今晚会不会心有余而力不足>_<\n';
           jueji.event.xingzhi *= 0.85;
         }
         break;
@@ -92,13 +92,13 @@ export class AppComponent {
       case 'SEX':
         tempEvent.isSex = true;
         if(jueji.event.xingzhi < 0.8) {
-        tempEvent.eventText += '对方的兴致似乎不太高，再闲聊一会儿吧～\n';
+        tempEvent.eventText += '对方的兴致似乎不太高，再「闲聊」一会儿吧～\n';
 	}else{
         tempEvent.eventText += this.juejiStage3.name + '合起了帷幕。\n';
         if(Math.random() < 0.5){
           let sexEvent = this.juejiStage3.event.sex[Math.floor(Math.random()*this.juejiStage3.event.sex.length)];
           tempEvent.eventText += '交欢之际，' + this.juejiStage3.name + sexEvent.key + '\n';
-          tempEvent.eventText += sexEvent.value > 0 ? '你不禁大喜，兴致++\n': '你有些无语，兴致--\n';
+          tempEvent.eventText += sexEvent.value > 0 ? '你不禁大喜，兴致勃勃\n': '你有些无语，意兴阑珊\n';
             jueji.event.xingzhi *= (1 + this.sexEvent.value);
         } else{
           tempEvent.eventText += '鸳鸯帐里，烛影双龙戏...\n'
