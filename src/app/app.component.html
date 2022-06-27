@@ -3,7 +3,7 @@
     <nz-header></nz-header>
     <nz-content>
       <div *ngIf="stage1Name">
-        <h3 nz-typography>欢迎{{username}}来到西风楼！</h3>
+        <h3 nz-typography>欢迎{{username}}来到西风楼(贫穷版)！</h3>
         <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton"  *ngIf="!stage2Select">
           <input type="text" nz-input placeholder="您的名字是？" (keyup)="getName($event)" [(ngModel)]="username"/>
         </nz-input-group>
